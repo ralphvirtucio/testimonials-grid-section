@@ -34,4 +34,41 @@
 
 body {
   font-family: var(--font-family);
+  max-width: 75rem;
+  margin: 10rem auto;
+}
+
+main {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  grid-template-areas: 'daniel daniel jonathan kira' 'jeanette patrick patrick kira';
+}
+
+section {
+  box-shadow: 1rem 1rem 1.5rem rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.first-section {
+  grid-area: daniel;
+  background-color: var(--prima-color1);
+}
+.second-section {
+  grid-area: jonathan;
+  background-color: var(--prima-color2);
+}
+.third-section {
+  grid-area: jeanette;
+  background-color: var(--prima-color4);
+}
+.fourth-section {
+  grid-area: patrick;
+  background-color: var(--prima-color3);
+}
+.fifth-section {
+  grid-area: kira;
+  background-color: var(--prima-color4);
 }
