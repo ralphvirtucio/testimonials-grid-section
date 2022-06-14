@@ -44,10 +44,9 @@ body {
 
 main {
   display: grid;
-  /* grid-template-rows: 1fr 1fr; */
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
-  grid-template-areas: 'daniel daniel jonathan kira' 'jeanette patrick patrick kira';
 }
 
 section {
@@ -57,7 +56,7 @@ section {
 }
 
 .first-section {
-  grid-area: daniel;
+  grid-column: 1 / span 3;
   background-color: var(--prima-color1);
   background-image: url('images/bg-pattern-quotation.svg');
   background-repeat: no-repeat;
@@ -69,22 +68,21 @@ section {
 }
 
 .second-section {
-  grid-area: jonathan;
   background-color: var(--prima-color2);
 }
 
 .third-section {
-  grid-area: jeanette;
   background-color: var(--prima-color4);
 }
 
 .fourth-section {
-  grid-area: patrick;
   background-color: var(--prima-color3);
+  grid-column: 2 / 5;
 }
 .fifth-section {
-  grid-area: kira;
   background-color: var(--prima-color4);
+  grid-row: 1 / 3;
+  grid-column: 5 / 6;
 }
 
 .first-section,
