@@ -34,14 +34,18 @@
 
 body {
   font-family: var(--font-family);
-  max-width: 75rem;
-  margin: 10rem auto;
+  /* max-width: 75rem;
+  margin: 10rem auto; */
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  padding: 0 15em;
 }
 
 main {
   display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-rows: 1fr 1fr; */
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   gap: 1rem;
   grid-template-areas: 'daniel daniel jonathan kira' 'jeanette patrick patrick kira';
 }
@@ -49,21 +53,31 @@ main {
 section {
   box-shadow: 1rem 1rem 1.5rem rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .first-section {
   grid-area: daniel;
   background-color: var(--prima-color1);
+  background-image: url('images/bg-pattern-quotation.svg');
+  background-repeat: no-repeat;
+  background-position: 80% 3%;
 }
+
+.first-section .testimonial {
+  font-size: 1.2rem;
+}
+
 .second-section {
   grid-area: jonathan;
   background-color: var(--prima-color2);
 }
+
 .third-section {
   grid-area: jeanette;
   background-color: var(--prima-color4);
 }
+
 .fourth-section {
   grid-area: patrick;
   background-color: var(--prima-color3);
@@ -71,4 +85,47 @@ section {
 .fifth-section {
   grid-area: kira;
   background-color: var(--prima-color4);
+}
+
+.first-section,
+.second-section,
+.fourth-section {
+  color: var(--prima-color4);
+}
+
+.third-section,
+.fifth-section {
+  color: var(--prima-color2);
+}
+
+.profile {
+  display: flex;
+  gap: 0.5rem;
+  font-size: var(--fs-body);
+  margin-bottom: 1rem;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile-title {
+  opacity: 0.5;
+}
+
+section img {
+  border-radius: 100px;
+  border: solid 1px var(--neu-color2);
+  width: 2rem;
+}
+
+.testimonial {
+  max-width: 48ch;
+  margin-bottom: 1rem;
+}
+
+.testimonials {
+  opacity: 0.7;
 }
