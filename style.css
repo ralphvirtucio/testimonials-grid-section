@@ -14,7 +14,7 @@
 1. "Verified Graduate" has the same color as the person's name with 50% opacity
 2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity */
 
-  --fs-body: 0.5rem;
+  --fs-body: 0.82rem;
   --fw-500: 500;
   --fw-600: 600;
 
@@ -34,19 +34,21 @@
 
 body {
   font-family: var(--font-family);
-  display: grid;
-  place-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
-  padding: 0 20em;
 }
 
 main {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
   grid-template-areas:
     'daniel daniel jonathan kira'
     'jeanette patrick patrick kira';
   gap: 2rem;
+  max-width: 80rem;
 }
 
 section {
@@ -64,7 +66,7 @@ section {
 }
 
 .first-section .testimonial {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .second-section {
@@ -75,6 +77,10 @@ section {
 .third-section {
   background-color: var(--prima-color4);
   grid-area: jeanette;
+}
+
+.third-section .testimonial {
+  max-width: 18ch;
 }
 
 .fourth-section {
@@ -122,8 +128,24 @@ section img {
 
 .testimonial {
   margin-bottom: 1rem;
+  font-size: 1.4rem;
 }
 
 .testimonials {
   opacity: 0.7;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+  main {
+    padding: 2rem;
+
+    grid-template-areas:
+      'daniel'
+      'jonathan'
+      'jeanette'
+      'patrick'
+      'kira';
+  }
 }
