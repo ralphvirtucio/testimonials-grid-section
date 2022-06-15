@@ -140,7 +140,7 @@ section img {
 @media (max-width: 768px) {
   main {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: auto;
     grid-template-areas:
       'daniel'
       'jonathan'
@@ -154,28 +154,13 @@ section img {
 @media (max-width: 375px) {
   main {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto;
     grid-template-areas:
       'daniel'
       'jonathan'
       'jeanette'
       'patrick'
       'kira';
-  }
-
-  .first-section {
-    grid-area: daniel;
-  }
-  .second-section {
-    grid-area: jonathan;
-  }
-  .third-section {
-    grid-area: jeanette;
-  }
-  .fourth-section {
-    grid-area: patrick;
-  }
-  .fifth-section {
-    grid-area: kira;
+    padding: 6rem 2rem;
   }
 }
