@@ -9,6 +9,7 @@ $white: hsl(0, 0%, 100);
 
 $neutral-clr-1: hsl(0, 0%, 81%);
 $neutral-clr-2: hsl(210, 46%, 95%);
+$neutral-clr-3: hsl(217, 19%, 35%);
 
 $opacity-verified: 50%;
 $opacity-review: 70%;
@@ -154,7 +155,114 @@ body {
   font-family: $font-family;
   background-color: $neutral-clr-2;
 }
- 
+
+.testimonial {
+  margin-block: 4.4375rem;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 1.125rem;
+    margin-block-end: 1.125rem;
+
+    img {
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  &__name {
+    font-size: $font-size-body;
+  }
+
+  &__status {
+    font-size: 11px;
+    opacity: $opacity-verified;
+  }
+
+  &__card {
+    border-radius: 8px;
+    box-shadow:0px 5px 15px 0px rgba(0, 0, 0, 0.15);
+    background-color: $white;
+    margin-inline: 1.5rem;
+    padding-inline: 2rem;
+    padding-block: 2rem;
+    color: $white;
+
+  
+    &[data-username="daniel-clifford"] {
+      background-color: $primary-clr-1;
+      background-image: url('../images/bg-pattern-quotation.svg');
+      background-repeat: no-repeat;
+      background-position: top right 10%;
+
+      .testimonial__header {
+        img {
+          border: 2px solid #A775F1;
+        }
+      }
+    }
+    &[data-username="jonathan-walters"] {
+      background-color: $primary-clr-2;
+    }
+    &[data-username="jeanette-harmon"] {
+      background-color: $white;
+      color:  $neutral-clr-3;
+
+      // .testimonial__content {
+
+      //   p {
+      //     color: hsl(217, 19%, 35%);
+      //   }
+      // }
+    }
+    &[data-username="patrick-abrams"] {
+      background-color: $primary-clr-3;
+
+      .testimonial__header {
+        img {
+          border: 2px solid $primary-clr-1;
+        }
+      }
+    }
+    &[data-username="kira-whittle"] {
+      background-color: $white;
+      color:  $neutral-clr-3;
+
+      // .testimonial__content {
+
+      //   p {
+      //     color: hsl(217, 19%, 35%);
+      //   }
+      // }
+    }
+  
+    &:not(:last-child) {
+      margin-block-end: 1.5rem;
+  }
+  }
+
+  &__content {
+
+    p {
+      line-height: 1.2;
+
+      &:nth-child(1) {
+        margin-block-end: 2.5rem;
+        font-size: 1.25rem;
+        font-weight: $weight-600;
+      }
+
+      &:nth-child(2) {
+        opacity: $opacity-review;
+        font-weight: $weight-500;
+        font-size: $font-size-body;
+        line-height: 1.5;
+      }
+    }
+  }
+}
 
 
 /* --------------------------

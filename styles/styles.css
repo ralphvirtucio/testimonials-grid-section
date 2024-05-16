@@ -120,6 +120,80 @@ body {
   background-color: hsl(210, 46%, 95%);
 }
 
+.testimonial {
+  margin-block: 4.4375rem;
+}
+.testimonial__header {
+  display: flex;
+  align-items: center;
+  gap: 1.125rem;
+  margin-block-end: 1.125rem;
+}
+.testimonial__header img {
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+}
+.testimonial__name {
+  font-size: 0.8125rem;
+}
+.testimonial__status {
+  font-size: 11px;
+  opacity: 50%;
+}
+.testimonial__card {
+  border-radius: 8px;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
+  background-color: hsl(0, 0%, 100%);
+  margin-inline: 1.5rem;
+  padding-inline: 2rem;
+  padding-block: 2rem;
+  color: hsl(0, 0%, 100%);
+}
+.testimonial__card[data-username=daniel-clifford] {
+  background-color: hsl(263, 55%, 52%);
+  background-image: url("../images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right 10%;
+}
+.testimonial__card[data-username=daniel-clifford] .testimonial__header img {
+  border: 2px solid #A775F1;
+}
+.testimonial__card[data-username=jonathan-walters] {
+  background-color: hsl(217, 19%, 35%);
+}
+.testimonial__card[data-username=jeanette-harmon] {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(217, 19%, 35%);
+}
+.testimonial__card[data-username=patrick-abrams] {
+  background-color: hsl(219, 29%, 14%);
+}
+.testimonial__card[data-username=patrick-abrams] .testimonial__header img {
+  border: 2px solid hsl(263, 55%, 52%);
+}
+.testimonial__card[data-username=kira-whittle] {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(217, 19%, 35%);
+}
+.testimonial__card:not(:last-child) {
+  margin-block-end: 1.5rem;
+}
+.testimonial__content p {
+  line-height: 1.2;
+}
+.testimonial__content p:nth-child(1) {
+  margin-block-end: 2.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.testimonial__content p:nth-child(2) {
+  opacity: 70%;
+  font-weight: 500;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+
 /* --------------------------
   PAGE LAYOUT END
 ----------------------------*/
