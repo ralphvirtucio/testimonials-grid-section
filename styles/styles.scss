@@ -1,0 +1,161 @@
+
+
+
+$primary-clr-1: hsl(263, 55%, 52%);
+$primary-clr-2: hsl(217, 19%, 35%);
+$primary-clr-3: hsl(219, 29%, 14%);
+
+$white: hsl(0, 0%, 100);
+
+$neutral-clr-1: hsl(0, 0%, 81%);
+$neutral-clr-2: hsl(210, 46%, 95%);
+
+$opacity-verified: 50%;
+$opacity-review: 70%;
+
+$font-family:  "Barlow Semi Condensed", sans-serif;
+
+$font-size-body: 0.8125rem;
+
+$weight-500: 500;
+$weight-600: 600;
+
+// $breakpoints: (
+// 	small: 40em,
+// 	// 544px,
+// 		medium: 60em,
+// 	// 760px,
+// 		large: 61.25em,
+// 	// 980px,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+// );
+
+/*----------------------------
+	Visually hidden
+----------------------------*/
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+/* --------------------------
+  RESET START
+----------------------------*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-inline-size: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* --------------------------
+  RESET END
+----------------------------*/
+
+/* --------------------------
+  PAGE LAYOUT START
+----------------------------*/
+
+
+body {
+  font-family: $font-family;
+}
+ 
+
+
+/* --------------------------
+  PAGE LAYOUT END
+----------------------------*/
